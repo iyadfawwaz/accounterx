@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns١="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="bluea">#B8BFEB</color>
+    <color name="gray">#8088AC</color>
+    <color name="gre">#C92B2929</color>
+    <color name="green">#00ff00</color>
+    <color name="lavender">#8692f7</color>
+    <color name="orange">#FF9800</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red">#c70000</color>
+    <color name="reda">#F7BBCF</color>
+    <color name="smoke">#6FF8F7F4</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="whi">#CDF0F1E9</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="x500">#0C6F65</color>
+    <string name="addo">اضافة قيد جديد</string>
+    <string name="adduser">اضافة عميل</string>
+    <string name="app_name">حساباتي</string>
+    <string name="customer">المستفيد</string>
+    <string name="cut">قص عملة</string>
+    <string name="default_web_client_id" translatable="false">829567796456-e1ul55g33akj7rp87eg8db0lrqti6k4b.apps.googleusercontent.com</string>
+    <string name="entry">قيد جديد</string>
+    <string name="firebase_database_url" translatable="false">https://amisa-co-default-rtdb.europe-west1.firebasedatabase.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">829567796456</string>
+    <string name="google_api_key" translatable="false">AIzaSyAjwi5OyY0xAvxpDox6NqXcECZVjP7v4us</string>
+    <string name="google_app_id" translatable="false">1:829567796456:android:9794d90319d9c38abf355d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAjwi5OyY0xAvxpDox6NqXcECZVjP7v4us</string>
+    <string name="google_storage_bucket" translatable="false">amisa-co.appspot.com</string>
+    <string name="iyad">اياد</string>
+    <string name="loading">تحميل...</string>
+    <string name="no_selection">غير محدد</string>
+    <string name="project_id" translatable="false">amisa-co</string>
+    <string name="recievecenter">المركز المستقبل</string>
+    <string name="sendcenter">المركز المرسل.....</string>
+    <string name="sure">هل انت متأكد من عملية الحذف</string>
+    <style name="Theme.Accounterx" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/x500</item>
+        <item name="colorPrimaryVariant">@color/x500</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary" ns١:ignore="NewApi">@android:color/system_accent1_500</item>
+        <item name="colorSecondaryVariant">@color/x500</item>
+        <item name="colorOnSecondary">@color/x500</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+            
+                
+
+                
+    </style>
+    <style name="roundedImageViewRounded">
+                <item name="cornerFamily">rounded</item>
+                <item name="cornerSize">50%</item>
+            </style>
+</resources>
