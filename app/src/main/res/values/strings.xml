@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">حساباتي</string>
+    <string name="iyad">اياد</string>
+    <string name="loading">تحميل...</string>
+    <string name="entry">قيد جديد</string>
+    <string name="adduser">اضافة عميل</string>
+    <string name="no_selection">غير محدد</string>
+    <string name="addo">اضافة قيد جديد</string>
+    <string name="customer">المستفيد</string>
+    <string name="sure">هل انت متأكد من عملية الحذف</string>
+    <string name="cut">قص عملة</string>
+    <string name="sendcenter">المركز المرسل.....</string>
+    <string name="recievecenter">المركز المستقبل</string>
+</resources>
