@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name" formatted="true" translatable="true">my money management</string>
     <string name="iyad" translatable="true">iyad</string>
     <string name="loading" translatable="true">loading..</string>
