@@ -30,6 +30,7 @@ public class SingleCurrency implements Serializable {
         this.currencyName = currencyName;
     }
 
+    @SuppressWarnings("unused")
     public String getCurrencyName() {
         return currencyName;
     }
