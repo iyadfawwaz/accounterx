@@ -5,7 +5,6 @@ import static io.github.iyado.accounterx.AccounterApplication.check_connection;
 import static io.github.iyado.accounterx.AccounterApplication.noti;
 import static io.github.iyado.accounterx.Inputactivities.AddRestrictionActivity.doublito;
 import static io.github.iyado.accounterx.MainActivity.detectCurAllReturnDolar;
-import static io.github.iyado.accounterx.MainActivity.localCur;
 import static io.github.iyado.accounterx.utils.AllInOne.initCutPrice;
 import static io.github.iyado.accounterx.utils.AllInOne.initSymbol;
 import static io.github.iyado.accounterx.utils.AllInOne.loadCurrencies;
@@ -396,7 +395,7 @@ public class CurrencyConversationActivity extends AppCompatActivity {
         noti(this, "تم القص بنجاح");
     }
 
-    //cut kayit;
+    /** @noinspection DataFlowIssue*/ //cut kayit;
     public void uploadnewData(@NonNull AppCompatActivity activity,
                               @NonNull String username,
                               double pr1,
@@ -512,9 +511,9 @@ public class CurrencyConversationActivity extends AppCompatActivity {
                                 .child("count").get()
                                 .addOnSuccessListener(dataSnapshot1x -> {
                                     double count1 = 0.0d;
-                                    if (dataSnapshot1x.exists()) {
+                                    if (dataSnapshot1x.exists())
+                                        //noinspection DataFlowIssue
                                         count1 = dataSnapshot1x.getValue(Double.class);
-                                    }
                                     count1 += pr2;
                                     finalUser.child("account")
                                             .child(cur2)
@@ -523,6 +522,7 @@ public class CurrencyConversationActivity extends AppCompatActivity {
                                     finalUser.child("all").get().addOnSuccessListener(command -> {
                                         double count1x = 0.0d;
                                         if (command.exists()) {
+                                            //noinspection DataFlowIssue
                                             count1x = command.getValue(Double.class);
                                         }
                                         count1x += detectCurAllReturnDolar(cur2, pr2);
@@ -636,32 +636,28 @@ public class CurrencyConversationActivity extends AppCompatActivity {
                                             .child(date)
                                             .child(String.valueOf(System.currentTimeMillis()))
                                             .setValue(progsF)
-                                            .addOnSuccessListener(unused1 -> {
+                                            .addOnSuccessListener(unused1 -> userNop.child("account")
+                                                    .child(cur1)
+                                                    .child("count").get()
+                                                    .addOnSuccessListener(dataSnapshot1x -> {
+                                                        double count1 = 0.0d;
+                                                        if (dataSnapshot1x.exists()) {
+                                                            count1 = dataSnapshot1x.getValue(Double.class);
+                                                        }
+                                                        count1 -= roundD(finalCutfrq1);
+                                                        userNop.child("account")
+                                                                .child(cur1)
+                                                                .child("count").setValue(count1);
 
-                                                userNop.child("account")
-                                                        .child(cur1)
-                                                        .child("count").get()
-                                                        .addOnSuccessListener(dataSnapshot1x -> {
-                                                            double count1 = 0.0d;
-                                                            if (dataSnapshot1x.exists()) {
-                                                                count1 = dataSnapshot1x.getValue(Double.class);
+                                                        userNop.child("all").get().addOnSuccessListener(command -> {
+                                                            double count1x = 0.0d;
+                                                            if (command.exists()) {
+                                                                count1x = command.getValue(Double.class);
                                                             }
-                                                            count1 -= roundD(finalCutfrq1);
-                                                            userNop.child("account")
-                                                                    .child(cur1)
-                                                                    .child("count").setValue(count1);
-
-                                                            userNop.child("all").get().addOnSuccessListener(command -> {
-                                                                double count1x = 0.0d;
-                                                                if (command.exists()) {
-                                                                    count1x = command.getValue(Double.class);
-                                                                }
-                                                                count1x += detectCurAllReturnDolar(cur1, -roundD(finalCutfrq1));
-                                                                userNop.child("all").setValue(count1x);
-                                                            });
-                                                        }).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage()));
-
-                                            }).addOnFailureListener(e -> noti(activity, e.getMessage()));
+                                                            count1x += detectCurAllReturnDolar(cur1, -roundD(finalCutfrq1));
+                                                            userNop.child("all").setValue(count1x);
+                                                        });
+                                                    }).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage()))).addOnFailureListener(e -> noti(activity, e.getMessage()));
                                 }).addOnFailureListener(e -> noti(activity, e.getMessage()));
                     }
                 }
@@ -782,31 +778,27 @@ public class CurrencyConversationActivity extends AppCompatActivity {
                         .child(date)
                         .child(String.valueOf(System.currentTimeMillis()))
                         .setValue(progFx)
-                        .addOnSuccessListener(unused -> {
+                        .addOnSuccessListener(unused -> userBmw.child("account")
+                                .child(cur1)
+                                .child("count").get().addOnSuccessListener(dataSnapshot1x -> {
+                                    double count1 = 0.0d;
+                                    if (dataSnapshot1x.exists()) {
+                                        count1 = dataSnapshot1x.getValue(Double.class);
+                                        }
+                                    count1 -= pr1;
+                                    userBmw.child("account")
+                                            .child(cur1)
+                                            .child("count").setValue(count1);
+                                    userBmw.child("all").get().addOnSuccessListener(command -> {
+                                        double count1x = 0.0d;
+                                        if (command.exists()) {
+                                            count1x = command.getValue(Double.class);
+                                        }
+                                        count1x += detectCurAllReturnDolar(cur1, -pr1);
+                                        userBmw.child("all").setValue(count1x);
+                                    });
 
-                            userBmw.child("account")
-                                    .child(cur1)
-                                    .child("count").get().addOnSuccessListener(dataSnapshot1x -> {
-                                        double count1 = 0.0d;
-                                        if (dataSnapshot1x.exists()) {
-                                            count1 = dataSnapshot1x.getValue(Double.class);
-                                            }
-                                        count1 -= pr1;
-                                        userBmw.child("account")
-                                                .child(cur1)
-                                                .child("count").setValue(count1);
-                                        userBmw.child("all").get().addOnSuccessListener(command -> {
-                                            double count1x = 0.0d;
-                                            if (command.exists()) {
-                                                count1x = command.getValue(Double.class);
-                                            }
-                                            count1x += detectCurAllReturnDolar(cur1, -pr1);
-                                            userBmw.child("all").setValue(count1x);
-                                        });
-
-                                    }).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage()));
-
-                        })
+                                }).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage())))
 
                         .addOnFailureListener(e -> noti(activity, e.getMessage()));
             }
@@ -999,32 +991,28 @@ public class CurrencyConversationActivity extends AppCompatActivity {
                                                                                                         .child("accounts")
                                                                                                         .child(date)
                                                                                                         .child(String.valueOf(System.currentTimeMillis()))
-                                                                                                        .setValue(progmoq1).addOnFailureListener(command -> {
+                                                                                                        .setValue(progmoq1).addOnFailureListener(command -> userCcur2.child("account")
+                                                                                                                .child(exchanges[0])
+                                                                                                                .child("count").get()
+                                                                                                                .addOnSuccessListener(dataSnapshot1x -> {
+                                                                                                                    double count1 = 0.0d;
+                                                                                                                    if (dataSnapshot1x.exists()) {
+                                                                                                                        count1 = dataSnapshot1x.getValue(Double.class);
+                                                                                                                    }
+                                                                                                                    count1 -= dmoqafea;
+                                                                                                                    userCcur2.child("account")
+                                                                                                                            .child(exchanges[0])
+                                                                                                                            .child("count").setValue(count1);
 
-                                                                                                            userCcur2.child("account")
-                                                                                                                    .child(exchanges[0])
-                                                                                                                    .child("count").get()
-                                                                                                                    .addOnSuccessListener(dataSnapshot1x -> {
-                                                                                                                        double count1 = 0.0d;
-                                                                                                                        if (dataSnapshot1x.exists()) {
-                                                                                                                            count1 = dataSnapshot1x.getValue(Double.class);
+                                                                                                                    userCcur2.child("all").get().addOnSuccessListener(commandx -> {
+                                                                                                                        double count1x = 0.0d;
+                                                                                                                        if (commandx.exists()) {
+                                                                                                                            count1x = commandx.getValue(Double.class);
                                                                                                                         }
-                                                                                                                        count1 -= dmoqafea;
-                                                                                                                        userCcur2.child("account")
-                                                                                                                                .child(exchanges[0])
-                                                                                                                                .child("count").setValue(count1);
-
-                                                                                                                        userCcur2.child("all").get().addOnSuccessListener(commandx -> {
-                                                                                                                            double count1x = 0.0d;
-                                                                                                                            if (commandx.exists()) {
-                                                                                                                                count1x = commandx.getValue(Double.class);
-                                                                                                                            }
-                                                                                                                            count1x += detectCurAllReturnDolar(exchanges[0], -dmoqafea);
-                                                                                                                            userCcur2.child("all").setValue(count1x);
-                                                                                                                        });
-                                                                                                                    }).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage()));
-
-                                                                                                        })
+                                                                                                                        count1x += detectCurAllReturnDolar(exchanges[0], -dmoqafea);
+                                                                                                                        userCcur2.child("all").setValue(count1x);
+                                                                                                                    });
+                                                                                                                }).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage())))
                                                                                                         .addOnFailureListener(e -> noti(activity, e.getLocalizedMessage()));
                                                                                             }
                                                                                     ).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage()));

@@ -21,23 +21,17 @@ public class LocalUsers {
         this.usernames = users;
     }
 
-// --Commented out by Inspection START (04/06/2025 12:58):
-//    public void setError(String error) {
-//        this.error = error;
-//    }
-// --Commented out by Inspection STOP (04/06/2025 12:58)
+    public void setError(String error) {
+        this.error = error;
+    }
 
-// --Commented out by Inspection START (04/06/2025 12:58):
-//    public ArrayList<String> getUsernamesrs() {
-//        return usernames;
-//    }
-// --Commented out by Inspection STOP (04/06/2025 12:58)
+    public ArrayList<String> getUsernamesrs() {
+        return usernames;
+    }
 
-// --Commented out by Inspection START (04/06/2025 12:58):
-//    public String getError() {
-//        return error;
-//    }
-// --Commented out by Inspection STOP (04/06/2025 12:58)
+    public String getError() {
+        return error;
+   }
 
     @SuppressLint("NotifyDataSetChanged")
     public void addGetUsersListener(@NonNull GetUsers listener) {

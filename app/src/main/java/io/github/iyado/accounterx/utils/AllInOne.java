@@ -8,6 +8,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import io.github.iyado.accounterx.methods.GetCurrenceis;
@@ -17,23 +19,20 @@ public class AllInOne {
 
 
     public static HashMap<Integer, CurrencyDetails> currencyDetailsHashMap;
-    // --Commented out by Inspection (04/06/2025 12:58):public static ArrayList<CurrencyDetails> cursName;
+    public static ArrayList<CurrencyDetails> cursName;
     public static HashMap<String,String> sss;
     public static HashMap<String,Double> xxx;
 
     public static HashMap<Integer,CurrencyDetails> hashMap;
-    /** @noinspection ClassEscapesDefinedScope*/
     public static Taskx taskx;
     private AllInOne(){
         taskx = new Taskx();
     }
 
-// --Commented out by Inspection START (04/06/2025 12:58):
-//    public static ArrayList<CurrencyDetails> getCursName() {
-//        cursName.addAll(localCur.values());
-//        return cursName;
-//    }
-// --Commented out by Inspection STOP (04/06/2025 12:58)
+    public static ArrayList<CurrencyDetails> getCursName() {
+        cursName.addAll(localCur.values());
+        return cursName;
+    }
 
     public static void setSss(HashMap<String, String> sss) {
         AllInOne.sss = sss;
@@ -59,22 +58,19 @@ public class AllInOne {
         }
         return xxx;
     }
-// --Commented out by Inspection START (04/06/2025 12:58):
-//    public static void setCurrencyDetailsHashMap(HashMap<Integer, CurrencyDetails> currencyDetailsHashMap) {
-//        AllInOne.currencyDetailsHashMap = currencyDetailsHashMap;
-//    }
-// --Commented out by Inspection STOP (04/06/2025 12:58)
+
+    public static void setCurrencyDetailsHashMap(HashMap<Integer, CurrencyDetails> currencyDetailsHashMap) {
+        AllInOne.currencyDetailsHashMap = currencyDetailsHashMap;
+    }
 
     public static HashMap<Integer, CurrencyDetails> loadCurrencies() {
         return localCur;
     }
 
-// --Commented out by Inspection START (04/06/2025 12:58):
-//    public static void setXxx(HashMap<String, Double> xxx) {
-//        AllInOne.xxx = xxx;
-//    }
-// --Commented out by Inspection STOP (04/06/2025 12:58)
-    /** @noinspection ClassEscapesDefinedScope*/
+    public static void setXxx(HashMap<String, Double> xxx) {
+        AllInOne.xxx = xxx;
+    }
+
     public static Taskx taskxx(){
         //noinspection InstantiationOfUtilityClass
         new AllInOne();

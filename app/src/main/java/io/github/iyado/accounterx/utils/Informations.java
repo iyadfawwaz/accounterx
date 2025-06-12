@@ -15,17 +15,11 @@ public class Informations implements Serializable {
     private Map<String,Object> accounts;
     private double all;
 
-    private Informations(){
-
-    }
+    @SuppressWarnings("unused")
     public Informations(String uid, String type, String fullname) {
         this.uid = uid;
         this.type = type;
         this.fullname = fullname;
-    }
-
-    public void setAll(double all) {
-        this.all = all;
     }
 
     public double getAll() {

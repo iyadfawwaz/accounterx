@@ -42,6 +42,7 @@
                 android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_name"
                 android:scaleType="fitXY"
                 android:src="@android:drawable/ic_menu_camera" />
 
@@ -60,6 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/fullname"
+                android:autofillHints="username"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
@@ -69,6 +71,7 @@
                 android:textColor="@color/lavender"/>
 
             <EditText
+                android:autofillHints="username"
                 android:hint="@string/username"
                 android:id="@+id/username"
                 android:layout_width="match_parent"
@@ -76,6 +79,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
+                android:inputType="text"
                 android:padding="16dp"
                 android:textColor="@color/lavender" />
 
@@ -83,6 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/useraccount"
+                android:autofillHints="creditCardNumber"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"

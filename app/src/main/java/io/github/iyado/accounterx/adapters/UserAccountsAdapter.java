@@ -147,15 +147,16 @@ public class UserAccountsAdapter extends RecyclerView.Adapter<PrintAdapterViewHo
 
     private void removeRestrictions(String key) {
         usersReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            /** @noinspection DataFlowIssue*/
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot user: snapshot.getChildren()){
 
                     DatabaseReference userRef = user.getRef();
                         for (DataSnapshot account : user.child("accounts").getChildren()){
-                            // Log.e("armada",account.getValue(Prog.class).getKey());
                             for (DataSnapshot prog: account.getChildren()){
                                 Prog removedProg = prog.getValue(Prog.class);
+                                assert removedProg != null;
                                 String ke = removedProg.getKey();
                                 String cur2 = removedProg.getEx();
                                 double pr2 = removedProg.getSumAll();
@@ -178,32 +179,16 @@ public class UserAccountsAdapter extends RecyclerView.Adapter<PrintAdapterViewHo
                                                         .child("count").setValue(count1);
                                                 userRef.child("all").get().addOnSuccessListener(command -> {
 
-                                                    double count1x = 0.0d;
-                                                    if (command.exists()) {
-                                                        count1x = command.getValue(Double.class);
-                                                    }
 
                                                     updateAll(userRef);
-                                                    /*
-                                                    if (user.getKey().contains("مركز") || removedProg.getSender().equals(removedProg.getReciever())){
 
-                                                    }else {
-                                                        count1x += detectCurAllReturnDolar(cur2, -pr2);
-                                                        userRef.child("all").setValue(count1x);
-                                                    }
-
-                                                     */
                                                 });
-                                              //  progs.remove(removedProg);
-                                                //notifyDataSetChanged();
+
                                                 prog.getRef().removeValue();
 
                                             }).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage()));
-
-
                                 }
                             }
-                            // arrayList.add()
                         }
                 }
 
@@ -221,12 +206,10 @@ public class UserAccountsAdapter extends RecyclerView.Adapter<PrintAdapterViewHo
 
     private void updateAll(@NonNull DatabaseReference userRef) {
         userRef.child("account").addListenerForSingleValueEvent(new ValueEventListener() {
+            /** @noinspection DataFlowIssue*/
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 double[] allCount = new double[localCur.size()];
-                for (int i = 0 ; i < allCount.length; i++){
-                    allCount[i] = 0.0d;
-                }
                 for (DataSnapshot curs : snapshot.getChildren()){
                     for (DataSnapshot counts : curs.getChildren() ){
 

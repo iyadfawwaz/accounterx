@@ -98,10 +98,12 @@ public class CurrenciesAndCountsAdapter extends RecyclerView.Adapter<CurrenciesA
         super.setHasStableIds(hasStableIds);
     }
 
+    @SuppressWarnings("unused")
     public int getKey() {
         return key;
     }
 
+    @SuppressWarnings("unused")
     public void setKey(int key) {
         this.key = key;
     }

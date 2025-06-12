@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name" formatted="true" translatable="true">my money management</string>
     <string name="iyad" translatable="true">iyad</string>
     <string name="loading" translatable="true">loading..</string>
@@ -87,7 +87,7 @@
     <string name="username">username</string>
     <string name="cur_name">currency name</string>
     <string name="color">currency color</string>
-    <string name="cancel">cancel</string>
+    <string name="cancel" tools:ignore="ButtonCase">cancel</string>
     <string name="key">key</string>
     <string name="email_sent">email sent</string>
     <string name="signed_in">signedIn</string>

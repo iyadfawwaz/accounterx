@@ -62,7 +62,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Random;
 import io.github.iyado.accounterx.adapters.CurrencyNameAdapter;
-import io.github.iyado.accounterx.adapters.LocalSpinnerAdapter;
 import io.github.iyado.accounterx.utils.CurrencyDetails;
 import io.github.iyado.accounterx.methods.GetUsers;
 import io.github.iyado.accounterx.utils.Prog;
@@ -490,6 +489,7 @@ public class AddRestrictionActivity extends AppCompatActivity {
 
 
 
+    /** @noinspection DataFlowIssue*/
     @RequiresApi(api = Build.VERSION_CODES.VANILLA_ICE_CREAM)
     @SuppressLint("NotifyDataSetChanged")
     public void doAdd(@NonNull AppCompatActivity activity, @NonNull DatabaseReference reference, @NonNull TextView sender,
@@ -652,9 +652,8 @@ public class AddRestrictionActivity extends AppCompatActivity {
                                                                .child("count").get()
                                                                .addOnSuccessListener(dataSnapshot1x -> {
                                                                    double count1 = 0.0d;
-                                                                   if (dataSnapshot1x.exists()) {
+                                                                   if (dataSnapshot1x.exists())
                                                                        count1 = dataSnapshot1x.getValue(Double.class);
-                                                                   }
                                                                count1 -= doublito(finalProfitf1);
                                                                thisUser.child("account")
                                                                .child(exsend.getSelectedItem().toString())
@@ -662,9 +661,8 @@ public class AddRestrictionActivity extends AppCompatActivity {
 
                                                                    thisUser.child("all").get().addOnSuccessListener(command -> {
                                                                        double count1x = 0.0d;
-                                                                       if (command.exists()) {
+                                                                       if (command.exists())
                                                                            count1x = command.getValue(Double.class);
-                                                                       }
                                                                        count1x += detectCurAllReturnDolar(exsend.getSelectedItem().toString(), -doublito(finalProfitf1));
                                                                        thisUser.child("all").setValue(count1x);
                                                                    });
@@ -684,18 +682,16 @@ public class AddRestrictionActivity extends AppCompatActivity {
                                                                     .child("count").get()
                                                                     .addOnSuccessListener(dataSnapshot2x -> {
                                                                         double count2 = 0.0d;
-                                                                        if (dataSnapshot2x.exists()) {
+                                                                        if (dataSnapshot2x.exists())
                                                                             count2 = dataSnapshot2x.getValue(Double.class);
-                                                                        }
                                                                 count2 += doublito(finalProfitt1);
                                                                 thisUser.child("account")
                                                                         .child(exrec.getSelectedItem().toString())
                                                                         .child("count").setValue(count2);
                                                                         thisUser.child("all").get().addOnSuccessListener(command -> {
                                                                             double count1x = 0.0d;
-                                                                            if (command.exists()) {
+                                                                            if (command.exists())
                                                                                 count1x = command.getValue(Double.class);
-                                                                            }
                                                                             count1x += detectCurAllReturnDolar(exrec.getSelectedItem().toString(), doublito(finalProfitt1));
                                                                             thisUser.child("all").setValue(count1x);
                                                                         });
@@ -728,18 +724,16 @@ public class AddRestrictionActivity extends AppCompatActivity {
                                                             .child("count").get()
                                                             .addOnSuccessListener(dataSnapshot1x -> {
                                                                 double count1 = 0.0d;
-                                                                if (dataSnapshot1x.exists()) {
+                                                                if (dataSnapshot1x.exists())
                                                                     count1 = dataSnapshot1x.getValue(Double.class);
-                                                                }
                                                                 count1 += s1;
                                                                 senderUser.child("account")
                                                                         .child(exsend.getSelectedItem().toString())
                                                                         .child("count").setValue(count1);
                                                                 senderUser.child("all").get().addOnSuccessListener(command -> {
                                                                     double count1x = 0.0d;
-                                                                    if (command.exists()) {
+                                                                    if (command.exists())
                                                                         count1x = command.getValue(Double.class);
-                                                                    }
                                                                     count1x += detectCurAllReturnDolar(exsend.getSelectedItem().toString(), s1);
                                                                     senderUser.child("all").setValue(count1x);
                                                                 });
@@ -749,31 +743,33 @@ public class AddRestrictionActivity extends AppCompatActivity {
                                                                     receiverUser.child("accounts")
                                                                     .child(date)
                                                                     .child(time)
-                                                                    .setValue(progT).addOnSuccessListener(unused -> receiverUser.child("account")
-                                                                            .child(exrec.getSelectedItem().toString())
-                                                                            .child("count").get()
-                                                                            .addOnSuccessListener(dataSnapshot2x -> {
-
-                                                                                double count2 = 0.0d;
-                                                                                if (dataSnapshot2x.exists()) {
-                                                                                    count2 = dataSnapshot2x.getValue(Double.class);
-                                                                                }
-                                                                                count2 += s2;
+                                                                    .setValue(progT).addOnSuccessListener(unused -> {
                                                                                 receiverUser.child("account")
                                                                                         .child(exrec.getSelectedItem().toString())
-                                                                                        .child("count").setValue(count2);
+                                                                                        .child("count").get()
+                                                                                        .addOnSuccessListener(dataSnapshot2x -> {
 
-                                                                                senderUser.child("all").get().addOnSuccessListener(command -> {
-                                                                                    double count1x = 0.0d;
-                                                                                    if (command.exists()) {
-                                                                                        count1x = command.getValue(Double.class);
-                                                                                    }
-                                                                                    count1x += detectCurAllReturnDolar(exrec.getSelectedItem().toString(), s2);
-                                                                                    senderUser.child("all").setValue(count1x);
-                                                                                });
+                                                                                            double count2 = 0.0d;
+                                                                                            if (dataSnapshot2x.exists()) {
+                                                                                                count2 = dataSnapshot2x.getValue(Double.class);
+                                                                                            }
+                                                                                            count2 += s2;
+                                                                                            receiverUser.child("account")
+                                                                                                    .child(exrec.getSelectedItem().toString())
+                                                                                                    .child("count").setValue(count2);
+
+                                                                                            senderUser.child("all").get().addOnSuccessListener(command -> {
+                                                                                                double count1x = 0.0d;
+                                                                                                if (command.exists()) {
+                                                                                                    count1x = command.getValue(Double.class);
+                                                                                                }
+                                                                                                count1x += detectCurAllReturnDolar(exrec.getSelectedItem().toString(), s2);
+                                                                                                senderUser.child("all").setValue(count1x);
+                                                                                            });
 
 
-                                                                            }).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage())));
+                                                                                        }).addOnFailureListener(e -> noti(activity, e.getLocalizedMessage()));
+                                                                            });
 
                                                                         DatabaseReference localUser = usersReference
                                                                                 .child(ccur1);
@@ -797,9 +793,8 @@ public class AddRestrictionActivity extends AppCompatActivity {
 
                                                                                                 senderUser.child("all").get().addOnSuccessListener(command -> {
                                                                                                     double count1x = 0.0d;
-                                                                                                    if (command.exists()) {
+                                                                                                    if (command.exists())
                                                                                                         count1x = command.getValue(Double.class);
-                                                                                                    }
                                                                                                     count1x += detectCurAllReturnDolar(exsend.getSelectedItem().toString(), -doublito(finalCountf));
                                                                                                     senderUser.child("all").setValue(count1x);
                                                                                                 });
@@ -817,9 +812,8 @@ public class AddRestrictionActivity extends AppCompatActivity {
                                                                                                         .child("count").get()
                                                                                                         .addOnSuccessListener(dataSnapshot4x -> {
                                                                                                             double count4 = 0.0d;
-                                                                                                            if (dataSnapshot4x.exists()) {
+                                                                                                            if (dataSnapshot4x.exists())
                                                                                                                 count4 = dataSnapshot4x.getValue(Double.class);
-                                                                                                            }
                                                                                                             count4 += dmoqafea;
                                                                                                             localUser.child("account")
                                                                                                                     .child(exchanges[0])

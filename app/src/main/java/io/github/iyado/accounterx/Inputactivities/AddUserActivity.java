@@ -141,13 +141,12 @@ public class AddUserActivity extends AppCompatActivity {
          }
     }
 
-    public void uploadData(@NonNull AppCompatActivity activity,@NonNull String id,
-                                  @NonNull String username,
-                                  @NonNull String fullname,
-                                  double account ,
-                                  @NonNull String cur){
-
-        SingleCurrency singleCurrency = new SingleCurrency(hello(account));
+    /** @noinspection DataFlowIssue*/
+    public void uploadData(@NonNull AppCompatActivity activity, @NonNull String id,
+                           @NonNull String username,
+                           @NonNull String fullname,
+                           double account ,
+                           @NonNull String cur){
 
         Informations userinfo = new Informations(id, type(), fullname);
 
@@ -206,9 +205,8 @@ public class AddUserActivity extends AppCompatActivity {
 
                                                                                 newUser.child("all").get().addOnSuccessListener(command -> {
                                                                                     double count1x = 0.0d;
-                                                                                    if (command.exists()) {
+                                                                                    if (command.exists())
                                                                                         count1x = command.getValue(Double.class);
-                                                                                    }
                                                                                     count1x += detectCurAllReturnDolar(cur, hello(account));
                                                                                     newUser.child("all").setValue(count1x);
                                                                                 });
@@ -231,9 +229,8 @@ public class AddUserActivity extends AppCompatActivity {
                                                                             .child("count").get()
                                                                             .addOnSuccessListener(dataSnapshot1x -> {
                                                                                 double count1 = 0.0d;
-                                                                                if (dataSnapshot1x.exists()) {
+                                                                                if (dataSnapshot1x.exists())
                                                                                     count1 = dataSnapshot1x.getValue(Double.class);
-                                                                                }
                                                                                 count1 -= hello(account);
                                                                                 capitalUser.child("account")
                                                                                         .child(cur)
@@ -241,9 +238,8 @@ public class AddUserActivity extends AppCompatActivity {
 
                                                                                 capitalUser.child("all").get().addOnSuccessListener(command -> {
                                                                                     double count1x = 0.0d;
-                                                                                    if (command.exists()) {
+                                                                                    if (command.exists())
                                                                                         count1x = command.getValue(Double.class);
-                                                                                    }
                                                                                     count1x += detectCurAllReturnDolar(cur, -hello(account));
                                                                                     capitalUser.child("all").setValue(count1x);
                                                                                 });
@@ -265,6 +261,7 @@ public class AddUserActivity extends AppCompatActivity {
                         });
     }
 
+    @SuppressWarnings("unused")
     public void setFound(boolean found) {
         isFound = found;
     }

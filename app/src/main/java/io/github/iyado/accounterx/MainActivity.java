@@ -44,10 +44,6 @@ import io.github.iyado.accounterx.utils.SingleCurrency;
 public class MainActivity extends AppCompatActivity {
 
 
-    public static void correctAlls(){
-
-    }
-
     @SuppressLint("NotifyDataSetChanged")
     public static void insertDataToDatabase(@NonNull AppCompatActivity context) {
 
@@ -191,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /** @noinspection DataFlowIssue*/
     public static void seme(AppCompatActivity context, String currency, double count) {
 
         long yourmilliseconds = System.currentTimeMillis();

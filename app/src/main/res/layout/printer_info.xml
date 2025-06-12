@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -89,7 +90,8 @@
                     android:layout_weight="1"
                     android:text="@string/currency"
                     android:textColor="@color/red"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    tools:ignore="NestedWeights" />
 
                 <TextView
                     android:gravity="center"
@@ -113,6 +115,7 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
                     android:src="@android:drawable/ic_delete" />
             </LinearLayout>
         </LinearLayout>
@@ -137,7 +140,8 @@
                 android:layout_weight="1"
                 android:paddingStart="12dp"
                 android:paddingBottom="5dp"
-                android:text="@string/total" />
+                android:text="@string/total"
+                tools:ignore="RtlSymmetry" />
 
             <TextView
                 android:id="@+id/total"
@@ -149,7 +153,8 @@
                 android:layout_weight="1"
                 android:paddingStart="12dp"
                 android:paddingBottom="5dp"
-                android:text="@string/from_date" />
+                android:text="@string/from_date"
+                tools:ignore="RtlSymmetry" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

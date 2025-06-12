@@ -67,24 +67,21 @@ public class CurrencyManager extends AppCompatActivity {
         startActivity(intent);
 
     }
-// --Commented out by Inspection START (04/06/2025 12:58):
-// --Commented out by Inspection START (04/06/2025 12:58):
-////    public void deleteCurrency(String cur){
-//// --Commented out by Inspection START (04/06/2025 12:58):
-// --Commented out by Inspection STOP (04/06/2025 12:58)
-// --Commented out by Inspection START (04/06/2025 12:58):
-//////        cursReference.child(cur).removeValue();
-//////
-// --Commented out by Inspection STOP (04/06/2025 12:58)
-////    }
-//// --Commented out by Inspection STOP (04/06/2025 12:58)
-// --Commented out by Inspection STOP (04/06/2025 12:58)
+
+    @SuppressWarnings("unused")
+   public void deleteCurrency(String cur){
+
+        cursReference.child(cur).removeValue();
+    }
+    @SuppressWarnings("unused")
     public void updateCurrency(){
 
     }
+    @SuppressWarnings("unused")
     public void searchCurrency(){
 
     }
+    @SuppressWarnings("unused")
     public void showCurrency(){
 
     }

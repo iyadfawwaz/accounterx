@@ -262,6 +262,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersViewHolder> {
 
     }
 
+    /** @noinspection DataFlowIssue*/
     private void showEditingDialog(int pos) {
         AlertDialog alertDialog = new AlertDialog.Builder(context)
                 .setIcon(R.drawable.dolar)
@@ -446,6 +447,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersViewHolder> {
 
     }
 
+    /** @noinspection DataFlowIssue*/
     private void hta(@NonNull DatabaseReference reference, @NonNull Informations informations, double count, String cur) {
 
         long yourmilliseconds = System.currentTimeMillis();
@@ -536,7 +538,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersViewHolder> {
                         count1x = command.getValue(Double.class);
 
                     }
-                    count1x += -count;
+                    count1x -= count;
                     reference.child(context.getString(R.string.profanddeprof))
                             .child("all").setValue(count1x);
 

@@ -96,23 +96,27 @@ public class PrintUserDetailsActivity extends AppCompatActivity {
             "*الحساب:";
 
 
+    @SuppressWarnings("unused")
     public static final String TAGy =
             "\n" +
             "*تاريخ المطابقة\uD83D\uDD50*\n";
+    @SuppressWarnings("unused")
     public static final String TAGz =
             "\n" +
             "✨✨✨✨✨✨✨✨✨\n" +
             "\n" +
             " *\uD83C\uDDF9\uD83C\uDDF7";
+    @SuppressWarnings("unused")
 
     public static final String l1 = "*\n" +
             " \n" +
             "\n" +
             "  *\uD83C\uDDFA\uD83C\uDDF8";
+    @SuppressWarnings("unused")
     public static final String d1 = "*\n" +
             " \n" +
             "\n" +
-            "  *⚖\uFE0F⚖\uFE0F الرصيد المقوم ⚖\uFE0F⚖\uFE0F* \n" +
+            "  *⚖️⚖️ الرصيد المقوم ⚖️⚖️* \n" +
             "\n" +
             "  *《 ";
     public static final String dl = "》\uD83D\uDCB2* \n" +

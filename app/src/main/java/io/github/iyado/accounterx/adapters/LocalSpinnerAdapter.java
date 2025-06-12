@@ -51,6 +51,7 @@ public class LocalSpinnerAdapter extends RecyclerView.Adapter<CurrenciesAndCount
         });
 
     }
+    @SuppressWarnings("unused")
     public void reset(ArrayList<String> stringArrayList){
         mStrings = stringArrayList;
     }
@@ -66,16 +67,20 @@ public class LocalSpinnerAdapter extends RecyclerView.Adapter<CurrenciesAndCount
         return mStrings.size();
     }
 
+
     @SuppressLint("NotifyDataSetChanged")
+    @SuppressWarnings("unused")
     public void setBackupStrings(ArrayList<String> mBackupStrings) {
         mStrings = mBackupStrings;
         notifyDataSetChanged();
     }
+    @SuppressWarnings("unused")
 
     public void setKey(int key) {
         this.key = key;
     }
 
+    @SuppressWarnings("unused")
     public int getKey() {
         return key;
     }

@@ -64,6 +64,7 @@
                         android:layout_width="45dp"
                         android:layout_height="45dp"
                         android:layout_marginEnd="4dp"
+                        android:contentDescription="@string/app_name"
                         android:src="@drawable/user" />
 
                     <com.google.android.material.textfield.TextInputLayout

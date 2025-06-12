@@ -17,6 +17,7 @@
         android:id="@+id/newUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints="name"
         android:ems="10"
         android:hint="@string/adderprice"
         android:inputType="numberSigned"

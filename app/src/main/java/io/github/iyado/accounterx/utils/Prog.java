@@ -38,23 +38,6 @@ public class Prog implements Serializable {
         this.sumAll = sumAll;
         this.isChecked = false;
     }
-    public Prog(String sender,String reciever,double count,
-                String ex, double sprofit,double rprofit,
-                String customer,String notice,double sumAll,
-                String key,String date,boolean isChecked) {
-        this.date = date;
-        this.key = key;
-        this.count = count;
-        this.ex = ex;
-        this.notice = notice;
-        this.customer = customer;
-        this.reciever = reciever;
-        this.sender = sender;
-        this.rprofit = rprofit;
-        this.sprofit = sprofit;
-        this.sumAll = sumAll;
-        this.isChecked = isChecked;
-    }
 
 
     public boolean isChecked() {
@@ -65,14 +48,17 @@ public class Prog implements Serializable {
         isChecked = checked;
     }
 
+    @SuppressWarnings("unused")
     public void setEx(String ex) {
         this.ex = ex;
     }
 
+    @SuppressWarnings("unused")
     public void setNotice(String notice) {
         this.notice = notice;
     }
 
+    @SuppressWarnings("unused")
     public String getNotice() {
         return notice;
     }
@@ -86,6 +72,7 @@ public class Prog implements Serializable {
         return sender;
     }
 
+    @SuppressWarnings("unused")
     public void setSender(String sender) {
         this.sender = sender;
     }
@@ -94,6 +81,7 @@ public class Prog implements Serializable {
         return reciever;
     }
 
+    @SuppressWarnings("unused")
     public void setReciever(String reciever) {
         this.reciever = reciever;
     }
@@ -102,6 +90,7 @@ public class Prog implements Serializable {
         return customer;
     }
 
+    @SuppressWarnings("unused")
     public void setCustomer(String customer) {
         this.customer = customer;
     }
@@ -110,6 +99,7 @@ public class Prog implements Serializable {
         return key;
     }
 
+    @SuppressWarnings("unused")
     public void setKey(String key) {
         this.key = key;
     }
@@ -122,18 +112,22 @@ public class Prog implements Serializable {
         this.date = date;
     }
 
+    @SuppressWarnings("unused")
     public double getSprofit() {
         return sprofit;
     }
 
+    @SuppressWarnings("unused")
     public void setSprofit(double sprofit) {
         this.sprofit = sprofit;
     }
 
+    @SuppressWarnings("unused")
     public double getRprofit() {
         return rprofit;
     }
 
+    @SuppressWarnings("unused")
     public void setRprofit(double rprofit) {
         this.rprofit = rprofit;
     }
@@ -150,6 +144,7 @@ public class Prog implements Serializable {
         return sumAll;
     }
 
+    @SuppressWarnings("unused")
     public void setSumAll(double sumAll) {
         this.sumAll = sumAll;
     }
