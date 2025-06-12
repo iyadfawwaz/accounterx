@@ -26,13 +26,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 import io.github.iyado.accounterx.adapters.CurrencyNameAdapter;
 import io.github.iyado.accounterx.utils.CurrencyDetails;
 import io.github.iyado.accounterx.utils.Informations;
 import io.github.iyado.accounterx.utils.Prog;
 import io.github.iyado.accounterx.R;
-import io.github.iyado.accounterx.utils.SingleCurrency;
 
 
 public class AddUserActivity extends AppCompatActivity {

@@ -177,12 +177,7 @@ public class UserAccountsAdapter extends RecyclerView.Adapter<PrintAdapterViewHo
                                                 userRef.child("account")
                                                         .child(cur2)
                                                         .child("count").setValue(count1);
-                                                userRef.child("all").get().addOnSuccessListener(command -> {
-
-
-                                                    updateAll(userRef);
-
-                                                });
+                                                userRef.child("all").get().addOnSuccessListener(command -> updateAll(userRef));
 
                                                 prog.getRef().removeValue();
 

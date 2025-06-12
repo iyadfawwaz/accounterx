@@ -25,6 +25,7 @@ public class LocalUsers {
         this.error = error;
     }
 
+    @SuppressWarnings("unused")
     public ArrayList<String> getUsernamesrs() {
         return usernames;
     }

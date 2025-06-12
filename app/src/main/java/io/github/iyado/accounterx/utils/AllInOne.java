@@ -29,6 +29,7 @@ public class AllInOne {
         taskx = new Taskx();
     }
 
+    @SuppressWarnings("unused")
     public static ArrayList<CurrencyDetails> getCursName() {
         cursName.addAll(localCur.values());
         return cursName;
@@ -59,6 +60,7 @@ public class AllInOne {
         return xxx;
     }
 
+    @SuppressWarnings("unused")
     public static void setCurrencyDetailsHashMap(HashMap<Integer, CurrencyDetails> currencyDetailsHashMap) {
         AllInOne.currencyDetailsHashMap = currencyDetailsHashMap;
     }
@@ -67,13 +69,13 @@ public class AllInOne {
         return localCur;
     }
 
+    @SuppressWarnings("unused")
     public static void setXxx(HashMap<String, Double> xxx) {
         AllInOne.xxx = xxx;
     }
 
     public static Taskx taskxx(){
-        //noinspection InstantiationOfUtilityClass
-        new AllInOne();
+        AllInOne allInOne = new AllInOne();
         hashMap = new HashMap<>();
         FirebaseDatabase.getInstance().getReference()
                 .child("currencies")
@@ -114,6 +116,7 @@ public static class Taskx {
         return error;
     }
 
+    @SuppressWarnings("unused")
     public HashMap<Integer, CurrencyDetails> getHashMap() {
         return hashMap;
     }

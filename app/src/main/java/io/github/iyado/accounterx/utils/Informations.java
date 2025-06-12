@@ -46,21 +46,24 @@ public class Informations implements Serializable {
         return fullname;
     }
 
+    @SuppressWarnings("unused")
     public void setUid(String uid) {
         this.uid = uid;
     }
     public void setType(String type) {
         this.type = type;
     }
+    @SuppressWarnings("unused")
     public void setFullname(String fullname) {
         this.fullname = fullname;
         }
 
-
+        @SuppressWarnings("unused")
     public Map<String, Object> getAccounts() {
        return accounts;
     }
 
+    @SuppressWarnings("unused")
     public void setAccounts(Map<String, Object> accounts) {
        this.accounts = accounts;
     }
@@ -72,5 +75,10 @@ public class Informations implements Serializable {
 
     public void setAccount(Map<String, Object> account) {
         this.account = account;
+    }
+
+    @SuppressWarnings("unused")
+    public void setAll(double all) {
+        this.all = all;
     }
 }
