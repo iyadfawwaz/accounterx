@@ -75,7 +75,8 @@ public class AllInOne {
     }
 
     public static Taskx taskxx(){
-        AllInOne allInOne = new AllInOne();
+        //noinspection InstantiationOfUtilityClass
+        new AllInOne();
         hashMap = new HashMap<>();
         FirebaseDatabase.getInstance().getReference()
                 .child("currencies")
