@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/takeScreen"
+        android:icon="@drawable/baseline_auto_mode_24"
+        android:title="@string/take_screenshot"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/kshf"
+        android:icon="@drawable/bond"
+        android:title="@string/print_user_info"
+        android:visible="true" />
+    <item
+        android:id="@+id/printx"
+        android:icon="@drawable/cut"
+        android:title="@string/copy_to_clipboard"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+</menu>

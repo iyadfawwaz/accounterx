@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+<menu
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <group >
+        <item
+            android:id="@+id/cut"
+            android:icon="@drawable/dolar"
+            android:iconTint="@color/light_blue_900"
+            android:title="@string/currencies_management"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/doprint"
+            android:iconTint="@color/light_blue_900"
+            android:icon="@drawable/bond"
+                android:title="@string/print_user_info"
+                app:showAsAction="ifRoom" />
+    </group>
     <item
-        android:id="@+id/cut"
-        android:icon="@drawable/cut"
-        android:title="اسعار القص"
-        app:showAsAction="collapseActionView" />
+        android:iconTint="@color/light_blue_900"
+        android:id="@+id/doadduser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/fab_add"
+        android:title="@string/adduser" />
     <item
+        android:iconTint="@color/x300"
+        app:showAsAction="collapseActionView"
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="تسجيل الخروج" />
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="@string/logout" />
+        <item
+            android:id="@+id/docut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="?attr/actionModeCutDrawable"
+            android:iconTint="@color/red"
+            android:title="@string/cut"
+            app:showAsAction="collapseActionView" />
+
 </menu>

@@ -1,70 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-
+    <uses-permission android:name="android.permission.HIDE_OVERLAY_WINDOWS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission
+        android:name="android.permission.MANAGE_MEDIA"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:name=".AccounterApplication"
         android:allowBackup="true"
-        android:icon="@drawable/statement"
-        android:label="@string/iyad"
-        android:roundIcon="@drawable/bond"
+        android:icon="@drawable/dolar"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/login_shape_bkss"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Accounterx">
+        android:theme="@style/Theme.Accounter">
+        <service
 
-        <activity
-            android:name=".LoginActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:exported="true">
+            android:name=".utils.DatabaseNotifier"
+            android:exported="false">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
 
-        </activity>
-
-
-        <activity
-            android:name=".JobActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:windowSoftInputMode="adjustResize"
-            android:name=".DetailActivity">
-
-        </activity>
-        <activity
-            android:windowSoftInputMode="adjustResize"
-            android:name=".UpdateActivity">
-
-        </activity>
-
-        <activity
-            android:windowSoftInputMode="adjustResize"
-            android:name=".UploadActivity">
-
-        </activity>
-        <activity
+        </service>
+        <activity android:name=".LoginActivity"
             android:exported="true"
-            android:name=".AddingActivity">
+            android:windowSoftInputMode="adjustResize"
+            >
 
         </activity>
-        <activity android:name=".PrinterInfo"
-            android:exported="true">
 
-        </activity>
-        <activity android:name=".CutActivity"
+        <activity
+            android:name=".RegisterActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".BlankActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".BoxesActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DetailActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Inputactivities.AddUserActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Inputactivities.AddRestrictionActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Inputactivities.CurrencyConversationActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".PrintUserDetailsActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".utils.CurrencyManager"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Inputactivities.AddNewCurrencyActivity"
+            android:enabled="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".RestrictionPrintActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

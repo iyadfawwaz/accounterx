@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:dither="true"
+    android:innerRadius="@dimen/d8"
+    android:innerRadiusRatio="@integer/material_motion_duration_short_1"
+    android:thickness="@dimen/d48"
+    android:thicknessRatio="50"
+    android:tintMode="add"
+    android:tint="@android:color/transparent"
+    android:useLevel="true"
+    android:visible="true"
+    >
+    <solid android:color="@color/material_dynamic_primary40"/>
+
+
+    <corners
+
+        android:bottomLeftRadius="@dimen/d48"
+        />
+
+    <stroke android:width="30dp"
+        android:color="@color/orange"
+        android:dashGap="1dp"
+        android:dashWidth="1dp"/>
+</shape>

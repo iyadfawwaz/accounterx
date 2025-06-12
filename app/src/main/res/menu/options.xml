@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/rename"
+        android:title="@string/rename"
+        android:icon="@android:drawable/ic_menu_myplaces" />
+
+    <item android:id="@+id/retype"
+        android:title="@string/retype"
+        android:icon="@android:drawable/checkbox_off_background" />
+    <item
+        android:id="@+id/edito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/add_plus_count"
+        />
+    <item
+        android:id="@+id/printo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@android:drawable/progress_indeterminate_horizontal"
+        android:title="@string/print_user_info" />
+    <item
+        android:id="@+id/cuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_auto_mode_24"
+        android:title="@string/docut" />
+</menu>

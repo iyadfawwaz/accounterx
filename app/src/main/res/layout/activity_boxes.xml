@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/backo">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:outlineProvider="paddedBounds"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:titleCollapseMode="scale">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100sp"
+                    android:layout_gravity="top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_collapseMode="pin"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+
+                        android:id="@+id/profit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/smoke"
+                        android:background="@drawable/lo"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#FFC107"
+                        android:gravity="center"
+                        android:text="@string/mizan"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <LinearLayout
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:id="@+id/linearLayoutx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_collapseMode="pin">
+
+
+                <Button
+                    app:icon="@drawable/sflagpx"
+                    android:id="@+id/europrice"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/blue" />
+
+                <Button
+                    android:id="@+id/dollarprice"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/teal_200"
+                    app:icon="@drawable/baseline_attach_money_24" />
+            </LinearLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <include
+            layout="@layout/recycler"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:id="@+id/include" />
+
+        <RelativeLayout
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            android:fitsSystemWindows="true"
+            android:background="@color/white"
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:nestedScrollingEnabled="true">
+
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/d8"
+                android:layout_toStartOf="@+id/search"
+                android:checked="true"
+                android:shadowColor="@android:color/holo_orange_dark"
+                android:shadowRadius="@integer/material_motion_duration_short_2"
+                app:buttonTint="@color/smoke" />
+
+            <androidx.appcompat.widget.SearchView
+
+                android:id="@+id/search"
+                app:hideNavigationIcon="true"
+                app:autoShowKeyboard="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/lavender_border"
+                android:focusable="true"
+                android:overScrollMode="always"
+                app:closeIcon="@android:drawable/ic_menu_close_clear_cancel"
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/searchuser"
+                app:searchHintIcon="@android:drawable/ic_search_category_default"
+                app:searchIcon="?android:attr/actionModeWebSearchDrawable" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            app:menu="@menu/setting"
+            android:nestedScrollingEnabled="true"
+            android:foregroundGravity="bottom"
+            app:layout_anchorGravity="bottom"
+            app:itemBackground="@drawable/lavender_borderx"
+            android:id="@+id/bottomnav"
+            app:itemTextColor="@color/orange"
+            android:paddingTop="@dimen/d24"
+            android:background="@color/cardview_light_background"
+            android:layout_gravity="bottom"
+            style="@style/Widget.Material3.BottomNavigationView"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/updater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/updater"
+            android:focusable="true"
+            app:layout_anchor="@id/europrice"
+            app:layout_anchorGravity="right|bottom"
+            android:layout_margin="@dimen/d8"
+            app:layout_scrollEffect="compress"
+            app:layout_scrollFlags="enterAlways"
+            app:srcCompat="@drawable/baseline_auto_mode_48" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:visibility="gone"
+            android:contentDescription="@string/app_name"
+            app:borderWidth="2dp"
+            app:fab_shadowColor="@color/light_blue_900"
+            android:outlineSpotShadowColor="@color/design_default_color_secondary_variant"
+            app:elevation="10dp"
+            style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+            app:layout_anchorGravity="end|top"
+            app:layout_anchor="@id/bottomnav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:tint="@color/white"
+            android:src="@drawable/fab_add" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

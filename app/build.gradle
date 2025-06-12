@@ -1,45 +1,61 @@
 plugins {
-    id 'com.android.application'
-    id 'com.google.gms.google-services'
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
     namespace 'io.github.iyado.accounterx'
-    compileSdk 34
-
+    compileSdk 35
     defaultConfig {
         applicationId "io.github.iyado.accounterx"
-        minSdk 24
-        targetSdk 34
+        minSdk 23
+        //noinspection EditedTargetSdkVersion
+        targetSdk 35
         versionCode 1
-        versionName "1.0"
+        versionName '5.0.2'
+        resConfigs "en", "ar"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures{
+        dataBinding true
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    dynamicFeatures = []
+    buildFeatures {
+        viewBinding true
     }
 }
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.10.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-database:20.3.0'
-    implementation 'com.github.bumptech.glide:glide:4.15.1'
-    implementation 'com.google.firebase:firebase-auth:22.3.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
-    implementation 'com.github.clans:fab:1.6.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation libs.appcompat
+    implementation libs.fab
+    implementation libs.glide
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.firebase.database
+    implementation libs.firebase.auth
+    implementation libs.firebase.messaging
+    implementation libs.gridlayout
+    annotationProcessor libs.gpros
+    implementation libs.colorpicker
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
 }

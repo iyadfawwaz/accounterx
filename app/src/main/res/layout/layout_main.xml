@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_margin="@dimen/d16"
+            android:id="@+id/whj"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top"
+            android:gravity="center"
+            android:background="@drawable/shapefxred"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:checked="true"
+                android:buttonTint="@android:color/holo_green_dark"
+                android:id="@+id/radioButton2"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:background="@color/orange"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d16"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/d4"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/d4"
+                android:layout_gravity="center"
+                android:background="@color/purple_700"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:backgroundTint="@color/grey_50"
+                    android:id="@+id/addresfx"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@android:drawable/ic_menu_add"
+                    android:text="@string/addo" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/d4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:backgroundTint="@color/grey_50"
+                    android:id="@+id/adduserfx"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableBottom="@android:drawable/ic_menu_add"
+                    android:text="@string/adduser"
+                    app:icon="@drawable/fab_add" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/orange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d16"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/d4"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/d4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:backgroundTint="@color/grey_50"
+                    android:id="@+id/cutfx"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cut"
+                    app:icon="@drawable/ic_action_namex" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/d4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:backgroundTint="@color/grey_50"
+                    android:id="@+id/printerfx"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/bond"
+                  android:text="@string/print_user_info" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/orange"
+            android:padding="@dimen/d4"
+            android:layout_margin="@dimen/d16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/d4"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:backgroundTint="@color/grey_50"
+                    android:id="@+id/jobfx"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:icon="@android:drawable/checkbox_on_background"
+                    android:text="@string/boxes" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/d4"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:backgroundTint="@color/grey_50"
+                    android:id="@+id/currenciesfx"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:icon="@drawable/turkish"
+                    android:text="@string/currencies_management" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/orange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d16"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/d4"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/d4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:backgroundTint="@color/grey_50"
+                    android:id="@+id/logoutfx"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/logout"
+                    app:icon="@android:drawable/ic_lock_lock" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/d4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:backgroundTint="@color/grey_50"
+                    android:id="@+id/ressfx"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/restrictions"
+                    app:icon="@android:drawable/ic_input_get" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/orange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d16"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/d4"
+            android:weightSum="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/d4"
+                android:layout_weight="1">
+
+                <Button
+                    android:backgroundTint="@color/grey_50"
+                    android:layout_gravity="center"
+                    android:id="@+id/detailsfx"
+                    style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profits"
+                    app:icon="@android:drawable/ic_lock_lock" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

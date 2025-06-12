@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring"
+    android:useLevel="false"
+    android:innerRadius="9dp"
+    android:thickness="9dp"
+    android:tintMode="multiply"
+    android:tint="@color/amber_100"
+    >
+    <solid android:color="@color/red_A700"/>
+    <stroke android:color="@color/red_100" android:width="12.5dp" android:dashGap="0.125dp" android:dashWidth="0.155dp"/>
+    <corners android:radius="25dp"/>
+    <size android:height="50dp" android:width="50dp"/>
+</shape>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    android:variablePadding="true"
+    android:exitFadeDuration="5"
+    android:enterFadeDuration="5"
+    android:constantSize="true"
+    android:visible="true"
+    android:dither="true"
+    android:autoMirrored="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true"
+         android:state_middle="true"
+        android:state_drag_hovered="true"
+        android:state_drag_can_accept="true"
+        android:state_checked="true"
+        android:state_checkable="true"
+        android:state_active="true"
+        android:drawable="@color/orange"
+        android:state_activated="true"
+        android:state_single="true"/>
+    <item android:drawable="@color/whi"/>
+
+
+</selector>

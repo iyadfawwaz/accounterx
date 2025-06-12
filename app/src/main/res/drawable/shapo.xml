@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:src="@drawable/foresto"
+    android:dither="true"
+    android:filter="true"
+    android:autoMirrored="true"
+    android:antialias="true"
+    android:mipMap="true"
+    android:tint="@color/x500"
+    android:tintMode="add"
+    android:tileMode="mirror"
+    android:tileModeX="repeat"
+    android:tileModeY="clamp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="200dp"
+    android:height="100dp"
+    >
+
+
+
+</bitmap>

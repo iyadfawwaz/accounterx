@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring"
+    android:useLevel="false"
+    android:tint="@color/blue_100"
+    android:tintMode="multiply"
+    android:thickness="9dp"
+    android:innerRadius="9dp"
+    >
+
+    <solid android:color="@color/green_A700"/>
+    <stroke android:color="@color/green_A200" android:width="10dp" android:dashGap="0.125dp" android:dashWidth="0.155dp"/>
+    <corners android:radius="25dp"/>
+    <size android:height="50dp" android:width="50dp"/>
+</shape>

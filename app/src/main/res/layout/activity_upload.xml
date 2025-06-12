@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
+    android:layout_marginBottom="50sp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UploadActivity">
+    tools:context=".Inputactivities.AddUserActivity">
 
     <androidx.cardview.widget.CardView
+        android:layout_marginBottom="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -18,6 +20,7 @@
         app:cardElevation="20dp">
 
         <LinearLayout
+            android:layout_marginBottom="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -34,14 +37,15 @@
                 android:textColor="@color/lavender"/>
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@android:drawable/ic_menu_camera"
+                android:layout_gravity="center"
                 android:id="@+id/uploadImage"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
                 android:layout_marginTop="10dp"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                android:src="@android:drawable/ic_menu_camera" />
 
-            <EditText
+            <NumberPicker
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/userid"
@@ -49,20 +53,31 @@
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
                 android:inputType="number"
-                android:hint="رقم الصندوق"
+                android:hint="@string/box_id"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/lavender"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/fullname"
+                android:background="@drawable/lavender_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:inputType="textAutoComplete"
+                android:hint="@string/fullname"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"/>
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:hint="@string/username"
                 android:id="@+id/username"
-                android:background="@drawable/lavender_border"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="اسم العميل"
+                android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
+                android:padding="16dp"
+                android:textColor="@color/lavender" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -73,7 +88,7 @@
                 android:padding="16dp"
                 android:typeface="monospace"
                 android:inputType="numberDecimal"
-                android:hint="الرصيد الافتتاحي"
+                android:hint="@string/opening_credit"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"/>
 
@@ -82,46 +97,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <LinearLayout
+            <RadioGroup
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent" >
 
-                <CheckBox
+                <RadioButton
                     android:id="@+id/chf"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/lavender_border"
-                    android:defaultFocusHighlightEnabled="true"
-                    android:gravity="center"
-                    android:hint="for|on"
-                    android:outlineAmbientShadowColor="@color/orange"
-                    android:padding="16dp"
-                    android:text="له|"
-                    android:textColor="@color/orange" />
+                    android:text="@string/for_it" />
 
-                <CheckBox
+                <RadioButton
                     android:id="@+id/cho"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/lavender_border"
-                    android:defaultFocusHighlightEnabled="true"
-                    android:gravity="center"
-                    android:hint="for|on"
-                    android:outlineAmbientShadowColor="@color/orange"
-                    android:padding="16dp"
-                    android:text="عليه"
-                    android:textColor="@color/orange" />
-            </LinearLayout>
+                    android:text="@string/on_it" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/chb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/primary" />
+
+                <RadioButton
+                    android:id="@+id/chb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/secondary" />
+            </RadioGroup>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="حفظ"
+                android:text="@string/save"
                 android:id="@+id/saveButton"
                 android:textSize="18sp"
                 android:layout_marginTop="20dp"
