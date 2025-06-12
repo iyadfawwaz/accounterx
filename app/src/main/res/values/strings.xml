@@ -87,7 +87,7 @@
     <string name="username">username</string>
     <string name="cur_name">currency name</string>
     <string name="color">currency color</string>
-    <string name="cancel" tools:ignore="ButtonCase">Cancel</string>
+    <string name="cancel">Cancel</string>
     <string name="key">key</string>
     <string name="email_sent">email sent</string>
     <string name="signed_in">signedIn</string>
