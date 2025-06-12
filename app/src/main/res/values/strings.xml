@@ -87,5 +87,5 @@
     <string name="edit_currency">edit currency</string>
     <string name="delete">delete</string>
     <string name="retype">change box type</string>
-    <string name="currency_conversion">currency conversion</string>
+    <string name="currency_conversion" translatable="false">currency conversion</string>
 </resources>

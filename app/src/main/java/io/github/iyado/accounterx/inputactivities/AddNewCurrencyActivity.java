@@ -19,8 +19,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
-
-import io.github.iyado.accounterx.databinding.AddCurrencyBinding;
 import io.github.iyado.accounterx.utils.CurrencyDetails;
 import io.github.iyado.accounterx.R;
 

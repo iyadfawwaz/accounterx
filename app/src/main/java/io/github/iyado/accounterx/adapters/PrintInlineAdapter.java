@@ -41,21 +41,15 @@ public class PrintInlineAdapter extends RecyclerView.Adapter<PrintInlineAdapter.
 
     }
 
-// --Commented out by Inspection START (12/06/2025 14:15):
-//    @SuppressLint("NotifyDataSetChanged")
-//    public void setUser(String user) {
-//        this.user = user;
-//
-//        notifyDataSetChanged();
-//    }
-// --Commented out by Inspection STOP (12/06/2025 14:15)
+    @SuppressLint("NotifyDataSetChanged")
+    @SuppressWarnings("unused")
+    public void setUser(String user) {
+        this.user = user;
+        notifyDataSetChanged();}
 
-// --Commented out by Inspection START (12/06/2025 14:15):
-//    public String getUser() {
-//        return user;
-//    }
-// --Commented out by Inspection STOP (12/06/2025 14:15)
-
+    public String getUser() {
+        return user;
+    }
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

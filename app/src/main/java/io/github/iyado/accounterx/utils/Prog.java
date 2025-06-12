@@ -146,6 +146,7 @@ public class Prog implements Serializable {
     public double getSumAll() {
         return sumAll;
    }
+    @SuppressWarnings("unused")
    public void setSumAll(double sumAll) {
 
         this.sumAll = sumAll;

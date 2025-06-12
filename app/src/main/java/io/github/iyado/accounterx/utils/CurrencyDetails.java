@@ -62,15 +62,19 @@ public class CurrencyDetails implements Serializable {
 
     public void setName(String name) {this.name = name;
     }
+    @SuppressWarnings("unused")
    public void setSymbol(String symbol) {
         this.symbol = symbol;
     }
+    @SuppressWarnings("unused")
     public void setCode(String code) {
         this.code = code;
     }
+    @SuppressWarnings("unused")
     public void setRate(double rate) {
         this.rate = rate;
         }
+
     public void setId(int id) {
         this.id = id;
     }
