@@ -2,7 +2,7 @@ package io.github.iyado.accounterx.adapters;
 
 
 import static io.github.iyado.accounterx.AccounterApplication.noti;
-import static io.github.iyado.accounterx.Inputactivities.AddRestrictionActivity.doublito;
+import static io.github.iyado.accounterx.inputactivities.AddRestrictionActivity.doublito;
 import static io.github.iyado.accounterx.MainActivity.detectCurAllReturnDolar;
 import static io.github.iyado.accounterx.utils.AllInOne.loadCurrencies;
 import static io.github.iyado.accounterx.utils.CutAndDiscount.exchanges;
@@ -35,7 +35,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import io.github.iyado.accounterx.Inputactivities.CurrencyConversationActivity;
+import io.github.iyado.accounterx.inputactivities.CurrencyConversationActivity;
 import io.github.iyado.accounterx.PrintUserDetailsActivity;
 import io.github.iyado.accounterx.holders.UsersViewHolder;
 import io.github.iyado.accounterx.utils.CurrencyDetails;
@@ -118,7 +118,6 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersViewHolder> {
         }
 
         CurrenciesInPrinterAdapter cursNameAdapter = new CurrenciesInPrinterAdapter(informations.getUsername(), loadCurrencies());
-        cursNameAdapter.setWhere();
         holder.recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
         holder.recyclerView.setAdapter(cursNameAdapter);
         cursNameAdapter.notifyDataSetChanged();
@@ -229,10 +228,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersViewHolder> {
         editText.setHint(dataList.get(pos).getType());
 
         spinner.setSelection(dataList.get(pos).getType().equals("prim") ? 0 : 1);
-        // spinner.setOnItemClickListener((parent, view, position, id) -> {
-        //     editText.setText(parent.getAdapter().getItem(position).toString());
 
-        //  });
         AlertDialog alertDialog = new AlertDialog.Builder(context)
                 .setView(spinner)
                 .setCancelable(false)
@@ -430,9 +426,11 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersViewHolder> {
         return position;
     }
 
-    public Context getContext() {
-        return context;
-    }
+// --Commented out by Inspection START (12/06/2025 14:15):
+//    public Context getContext() {
+//        return context;
+//    }
+// --Commented out by Inspection STOP (12/06/2025 14:15)
 
     @Override
     public long getItemId(int position) {

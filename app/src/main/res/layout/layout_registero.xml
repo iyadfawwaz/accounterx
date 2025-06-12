@@ -1,99 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:background="@android:color/transparent"
-        android:gravity="center"
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-
-    <TextView
-        android:layout_marginBottom="12dp"
-        android:textColor="@color/red"
-        android:id="@+id/alerto"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"/>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <LinearLayout
+            android:background="@android:color/transparent"
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/d8"
-            android:hint="@string/login_email_hint"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            android:orientation="horizontal"
-            android:padding="@dimen/d8"
-            app:endIconMode="clear_text"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
-                style="@style/ThemeOverlay.Material3.TextInputEditText"
+            <TextView
+                android:layout_marginBottom="12dp"
+                android:textColor="@color/red"
+                android:id="@+id/alerto"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="12dp"
-                android:autofillHints="emailAddress"
-                android:ems="15"
-                android:gravity="center"
-                android:inputType="textEmailAddress"
-                android:labelFor="@id/email"
-                android:typeface="monospace" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_margin="@dimen/d8"
+                android:hint="@string/login_email_hint"
 
-        <com.google.android.material.textfield.TextInputLayout
+                android:orientation="horizontal"
+                android:padding="@dimen/d8"
+                app:endIconMode="clear_text"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/d8"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    style="@style/ThemeOverlay.Material3.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="12dp"
+                    android:autofillHints="emailAddress"
+                    android:ems="15"
+                    android:gravity="center"
+                    android:inputType="textEmailAddress"
+                    android:labelFor="@id/email"
+                    android:typeface="monospace" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            android:hint="@string/login_password_hint"
-            android:orientation="horizontal"
-            android:padding="@dimen/d8"
-            app:endIconMode="password_toggle"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            <com.google.android.material.textfield.TextInputLayout
 
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password"
-                style="@style/ThemeOverlay.Material3.TextInputEditText"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_margin="@dimen/d8"
 
-                android:layout_marginBottom="12dp"
-                android:autofillHints="emailAddress"
-                android:ems="15"
-                android:gravity="center"
-                android:inputType="textEmailAddress"
-                android:labelFor="@id/password"
-                android:typeface="monospace" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_margin="@dimen/d48"
-        android:backgroundTint="@color/orange"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:shadowColor="@color/black"
-        android:shadowRadius="@integer/material_motion_duration_short_1"
-        android:text="@string/rego"
-        android:fontFamily="monospace"
-        android:id="@+id/reg"/>
-    </LinearLayout>
+                android:hint="@string/login_password_hint"
+                android:orientation="horizontal"
+                android:padding="@dimen/d8"
+                app:endIconMode="password_toggle"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    style="@style/ThemeOverlay.Material3.TextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_marginBottom="12dp"
+                    android:autofillHints="emailAddress"
+                    android:ems="15"
+                    android:gravity="center"
+                    android:inputType="textEmailAddress"
+                    android:labelFor="@id/password"
+                    android:typeface="monospace" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_margin="@dimen/d48"
+                android:backgroundTint="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:shadowColor="@color/black"
+                android:shadowRadius="@integer/material_motion_duration_short_1"
+                android:text="@string/rego"
+                android:fontFamily="monospace"
+                android:id="@+id/reg" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

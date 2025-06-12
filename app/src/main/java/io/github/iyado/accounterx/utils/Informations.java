@@ -50,9 +50,11 @@ public class Informations implements Serializable {
     public void setUid(String uid) {
         this.uid = uid;
     }
-    public void setType(String type) {
-        this.type = type;
-    }
+// --Commented out by Inspection START (12/06/2025 14:15):
+//    public void setType(String type) {
+//        this.type = type;
+//    }
+// --Commented out by Inspection STOP (12/06/2025 14:15)
     @SuppressWarnings("unused")
     public void setFullname(String fullname) {
         this.fullname = fullname;
@@ -68,9 +70,13 @@ public class Informations implements Serializable {
        this.accounts = accounts;
     }
 
-    public Map<String, Object> getAccount() {
-        return account;
-    }
+// --Commented out by Inspection START (12/06/2025 14:15):
+// --Commented out by Inspection START (12/06/2025 14:15):
+////    public Map<String, Object> getAccount() {
+////        return account;
+////    }
+//// --Commented out by Inspection STOP (12/06/2025 14:15)
+// --Commented out by Inspection STOP (12/06/2025 14:15)
 
 
     public void setAccount(Map<String, Object> account) {

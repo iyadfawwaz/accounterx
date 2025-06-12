@@ -19,7 +19,7 @@ public class PrintAdapterViewHolder extends RecyclerView.ViewHolder {
     public final TextView total;
     public final TextView dates;
     public final TextView client;
-    public final CardView recCard;
+   public final CardView recCard;
     public final ImageView imageView;
     public final CheckBox checkBox;
 

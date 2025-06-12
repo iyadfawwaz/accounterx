@@ -18,6 +18,7 @@ import android.view.ContextMenu;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -145,9 +146,8 @@ public class PrintUserDetailsActivity extends AppCompatActivity {
     public LinearLayout screenShot;
     public CurrenciesAndCountsAdapter adapterF;
     public ArrayList<String> cnames;
-   // EditText fx,tx;
     public TextInputLayout fx,tx;
-    public CoordinatorLayout coordinatorLayout;
+   public CoordinatorLayout coordinatorLayout;
     public AppBarLayout appBarLayout;
     @SuppressLint("SimpleDateFormat")
     public static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM dd,yyyy");

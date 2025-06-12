@@ -1,57 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Accounterx" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/x300</item>
-        <item name="colorPrimaryVariant">@color/x300</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary" tools:ignore="NewApi">@color/x300</item>
-        <item name="colorSecondaryVariant">@color/x300</item>
-        <item name="colorOnSecondary">@color/x300</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Base application theme. -->
-        <!-- Primary brand color. -->
-
-        <!-- Customize your theme here. -->
-    </style>
-
-    <style name="Theme.Accounters" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/x200</item>
-        <item name="colorPrimaryVariant">@color/x200</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary" tools:ignore="NewApi">@color/x200</item>
-        <item name="colorSecondaryVariant">@color/x200</item>
-        <item name="colorOnSecondary">@color/x200</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/x200</item>
-        <!-- Base application theme. -->
-        <!-- Primary brand color. -->
-
-        <!-- Customize your theme here. -->
-    </style>
-
-    <style name="Theme.Accounterwhite" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary" tools:ignore="NewApi">@color/white</item>
-        <item name="colorSecondaryVariant">@color/white</item>
-        <item name="colorOnSecondary">@color/white</item>
-        <item name="colorAccent">@color/x200</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/white</item>
-
-        <!-- Base application theme. -->
-        <!-- Primary brand color. -->
-
-        <!-- Customize your theme here. -->
-    </style>
 
     <style name="Theme.Accounter" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">#01579B</item>
@@ -74,17 +22,5 @@
     <!-- Customize your theme here. -->
     <color name="x500">#0C6F65</color>
     <color name="x300">#C40678</color>
-    <color name="x200">#AB47BC</color>
 
-    <style name="Theme.Accounter.Fullscreen" parent="Theme.Accounter">
-        <item name="android:actionBarStyle">@style/Widget.Theme.Accounter.ActionBar.Fullscreen
-        </item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@null</item>
-    </style>
-
-    <style name="ThemeOverlay.Accounterx.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
-        <item name="fullscreenTextColor">@color/light_blue_A200</item>
-    </style>
 </resources>

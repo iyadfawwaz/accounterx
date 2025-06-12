@@ -64,14 +64,14 @@
             android:name=".DetailActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Inputactivities.AddUserActivity"
+            android:name=".inputactivities.AddUserActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Inputactivities.AddRestrictionActivity"
+            android:name=".inputactivities.AddRestrictionActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Inputactivities.CurrencyConversationActivity"
+            android:name=".inputactivities.CurrencyConversationActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -83,7 +83,7 @@
             android:exported="true"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Inputactivities.AddNewCurrencyActivity"
+            android:name=".inputactivities.AddNewCurrencyActivity"
             android:enabled="true"
             android:windowSoftInputMode="adjustResize" />
         <activity

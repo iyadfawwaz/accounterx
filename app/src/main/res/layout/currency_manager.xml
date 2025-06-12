@@ -1,74 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_marginTop="@dimen/d24"
-    android:id="@+id/constraintLayout1"
-    android:layout_height="75dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:layout_margin="@dimen/d4"
-        android:backgroundTint="@color/whiteCardColor"
-        android:gravity="center"
-        android:background="@drawable/radiusxl"
-        android:id="@+id/linearLayout10"
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="@dimen/d24"
+        android:id="@+id/constraintLayout1"
+        android:layout_height="75dp">
 
-        <TextView
-            android:layout_gravity="center"
+        <LinearLayout
+            android:layout_margin="@dimen/d4"
+            android:backgroundTint="@color/whiteCardColor"
             android:gravity="center"
             android:background="@drawable/radiusxl"
-            android:id="@+id/saar"
-            android:layout_width="0dp"
+            android:id="@+id/linearLayout10"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:text="@string/Valuation_Price" />
+            android:orientation="horizontal"
+            android:weightSum="8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@drawable/radiusxl"
-            android:id="@+id/moaaml"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/operator" />
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/radiusxl"
+                android:id="@+id/saar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/Valuation_Price" />
 
-        <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@drawable/radiusxl"
-            android:id="@+id/rmz"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/Currency_Symbol" />
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/radiusxl"
+                android:id="@+id/moaaml"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/operator" />
 
-        <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@drawable/radiusxl"
-            android:id="@+id/asm"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:text="@string/cur_name" />
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/radiusxl"
+                android:id="@+id/rmz"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Currency_Symbol" />
 
-        <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@drawable/radiusxl"
-            android:id="@+id/rqm"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/id" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/radiusxl"
+                android:id="@+id/asm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="@string/cur_name" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/radiusxl"
+                android:id="@+id/rqm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/id" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

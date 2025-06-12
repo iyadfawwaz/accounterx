@@ -2,7 +2,7 @@ package io.github.iyado.accounterx;
 
 
 import static io.github.iyado.accounterx.AccounterApplication.noti;
-import static io.github.iyado.accounterx.Inputactivities.AddRestrictionActivity.doublito;
+import static io.github.iyado.accounterx.inputactivities.AddRestrictionActivity.doublito;
 import static io.github.iyado.accounterx.MainActivity.databaseReference;
 import static io.github.iyado.accounterx.MainActivity.insertDataToDatabase;
 import static io.github.iyado.accounterx.MainActivity.localCur;
@@ -56,8 +56,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicReference;
 
-import io.github.iyado.accounterx.Inputactivities.CurrencyConversationActivity;
-import io.github.iyado.accounterx.Inputactivities.AddUserActivity;
+import io.github.iyado.accounterx.inputactivities.CurrencyConversationActivity;
+import io.github.iyado.accounterx.inputactivities.AddUserActivity;
 import io.github.iyado.accounterx.adapters.UsersAdapter;
 import io.github.iyado.accounterx.utils.CurrencyDetails;
 import io.github.iyado.accounterx.utils.CurrencyManager;

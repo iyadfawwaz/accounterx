@@ -31,9 +31,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Objects;
 
-import io.github.iyado.accounterx.Inputactivities.AddRestrictionActivity;
-import io.github.iyado.accounterx.Inputactivities.CurrencyConversationActivity;
-import io.github.iyado.accounterx.Inputactivities.AddUserActivity;
+import io.github.iyado.accounterx.inputactivities.AddRestrictionActivity;
+import io.github.iyado.accounterx.inputactivities.CurrencyConversationActivity;
+import io.github.iyado.accounterx.inputactivities.AddUserActivity;
 import io.github.iyado.accounterx.utils.CurrencyDetails;
 import io.github.iyado.accounterx.utils.CurrencyManager;
 import io.github.iyado.accounterx.utils.LocalUsers;
@@ -484,18 +484,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
 }

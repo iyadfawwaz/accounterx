@@ -18,7 +18,7 @@ public class CurrencyManagerViewHolder extends RecyclerView.ViewHolder{
     public final TextView asm;
     public final TextView rqm;
     public final View view;
-    public final LinearLayout layout;
+   public final LinearLayout layout;
     public final ConstraintLayout constraintLayout1;
 
     public CurrencyManagerViewHolder(@NonNull View itemView) {

@@ -3,14 +3,10 @@
     <dimen name="d8">8dp</dimen>
     <dimen name="d32">32dp</dimen>
     <dimen name="d24">24dp</dimen>
-    <dimen name="acD">?attr/actionBarSize</dimen>
 
     <dimen name="headerTextSize">22sp</dimen>
-    <dimen name="newsMoreTextSize">12sp</dimen>
-    <dimen name="loginCardRadius">20dp</dimen>
     <dimen name="loginViewsMargin">20dp</dimen>
 
-    <dimen name="signup_text_margin_top">10dp</dimen>
     <dimen name="d48">48dp</dimen>
     <dimen name="d4">4dp</dimen>
     <dimen name="d16">16dp</dimen>

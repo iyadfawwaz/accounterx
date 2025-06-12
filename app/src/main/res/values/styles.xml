@@ -1,14 +1,5 @@
 <resources>
 
-    <style name="Widget.Theme.Accounter.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
-    </style>
-
-    <style name="Widget.Theme.Accounter.ButtonBar.Fullscreen" parent="">
-        <item name="android:background">@color/black_overlay</item>
-        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
-    </style>
-
     <style name="SpinnerTheme" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
         <item name="android:background">@drawable/spinner_background</item>
         <item name="android:color">@color/light_blue_900</item>
@@ -20,16 +11,6 @@
         <item name="iconTintMode">add</item>
         <item name="iconTint">@color/m</item>
     </style>
-
-
-
-
-
-
-<style name="headerTextPrimary" parent="headerText">
-<item name="android:textColor">@color/primaryTextColor</item>
-</style>
-
 
 
     <style name="parent">
@@ -50,24 +31,6 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="loginHeader">
-        <item name="android:textColor">@color/primaryTextColor</item>
-        <item name="android:textSize">@dimen/headerTextSize</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="loginCard" parent="parent" />
-
-    <style name="linearParent" parent="parent">
-        <item name="android:orientation">vertical</item>
-    </style>
-
-
-
-    <style name="modifiedEditText" parent="parent">
-        <item name="android:textSize">@dimen/newsMoreTextSize</item>
-        <item name="android:backgroundTint">@color/primaryTextColor</item>
-    </style>
 
     <style name="viewParent">
         <item name="android:layout_width">wrap_content</item>

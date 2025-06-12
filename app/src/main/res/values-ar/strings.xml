@@ -2,8 +2,6 @@
 <resources>
 	<string name="app_name">إدارة أموالي</string>
 	<string name="iyad">إياد</string>
-	<string name="loading">تحميل..</string>
-	<string name="entry">قيود جديدة</string>
 	<string name="adduser">أضف المستخدم</string>
 	<string name="no_selection">عدم الاختيار</string>
 	<string name="addo">أضف قيودًا جديدة</string>
@@ -16,39 +14,25 @@
 	<string name="tox">ل</string>
 	<string name="fromx">من</string>
 	<string name="adderprice">عدد الإضافة</string>
-	<string name="for_on">ل | على</string>
 	<string name="fullname">الاسم الكامل او الملاحظات</string>
 	<string name="mizan">الميزان:</string>
 	<string name="rename">تغيير الوصف</string>
-	<string name="end">انتهى التحميل</string>
-	<string name="connected">متصل</string>
-	<string name="title_dynamicfeature">عنوان الوحدة النمطية</string>
 	<string name="p">عدد</string>
 	<string name="reset">هل نسيت كلمة السر</string>
 	<string name="register">تسجيل</string>
-	<string name="dummy_content">ح</string>
-	<string name="dummy_button">بعقب</string>
 	<string name="rego">تسجيل</string>
-	<string name="passo">كلمة المرور</string>
-	<string name="eadd">بريد إلكتروني</string>
 	<string name="onus">إلى - علينا</string>
 	<string name="login_email_hint">بريد إلكتروني</string>
 	<string name="login_password_hint">كلمة المرور</string>
-	<string name="signup_login_hint">هل لديك بالفعل حساب؟ تسجيل الدخول</string>
-	<string name="login_signup_hint">ليس لديك حساب؟ اشتراك</string>
 	<string name="select_user">الرجاء تحديد مستخدم</string>
 	<string name="profanddeprof">الأرباح والخسائر</string>
-	<string name="translate_profits">ترحيل الأرباح</string>
 	<string name="u_r_not_connected">غير متصل</string>
 	<string name="adder_to_waiting_list">تحذير !!!!! 
  أضاف إلى قائمة الانتظار</string>
 	<string name="cant_cut_without_internet">لا يمكن أن تقطع بدون الإنترنت</string>
 	<string name="cant_add_without_internet">لا يمكن أن تضيف بدون الإنترنت</string>
 	<string name="no_internet">لا اتصال إنترنت</string>
-	<string name="warning">تحذير!!!!!!</string>
-	<string name="euro"> يورو أوربي</string>
 	<string name="dolar">دولار أمريكي</string>
-	<string name="tl">ليرة تركية</string>
 	<string name="updater">تحديث</string>
 	<string name="print_user_info">كشف حساب</string>
 	<string name="boxes">العملاء</string>
@@ -91,9 +75,7 @@
 	<string name="cancel">يلغي</string>
 	<string name="key">مفتاح</string>
 	<string name="email_sent">أرسل البريد الإلكتروني</string>
-	<string name="signed_in">SignedIn</string>
 	<string name="no_user">لم يتم العثور على المستخدم</string>
-	<string name="email_not_verified">البريد الإلكتروني لم يتم التحقق منه</string>
 	<string name="updated">تم تحديثه</string>
 	<string name="deleted">تم حذفه</string>
 	<string name="operator">عملية</string>
@@ -106,4 +88,5 @@
 	<string name="edit_currency">تحرير العملة</string>
 	<string name="delete">يمسح</string>
 	<string name="retype">تغيير نوع الصندوق</string>
+    <string name="currency_conversion">currency conversion</string>
 </resources>

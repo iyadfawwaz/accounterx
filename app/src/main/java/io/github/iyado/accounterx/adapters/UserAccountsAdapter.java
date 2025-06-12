@@ -240,13 +240,15 @@ public class UserAccountsAdapter extends RecyclerView.Adapter<PrintAdapterViewHo
         this.user = user;
     }
 
-    /**
-     * @return {@code }
-     */
-    @NonNull
-    public String getUser() {
-        return user;
-    }
+// --Commented out by Inspection START (12/06/2025 14:15):
+//    /**
+//     * @return {@code }
+//     */
+//    @NonNull
+//    public String getUser() {
+//        return user;
+//    }
+// --Commented out by Inspection STOP (12/06/2025 14:15)
 
     @Override
     public int getItemCount() {

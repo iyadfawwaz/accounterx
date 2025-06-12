@@ -36,18 +36,17 @@ public class CurrencyDetails implements Serializable {
     }
 
 
+
     public String getFlag() {
-       return flag;
+      return flag;
     }
     public void setFlag(String flag) {
         this.flag = flag;
     }
 
     public String getName() {
-
-       return name;
+        return name;
    }
-
     public String getSymbol() {
         return symbol;
     }
@@ -61,9 +60,7 @@ public class CurrencyDetails implements Serializable {
         return id;
     }
 
-
-   public void setName(String name) {
-       this.name = name;
+    public void setName(String name) {this.name = name;
     }
    public void setSymbol(String symbol) {
         this.symbol = symbol;

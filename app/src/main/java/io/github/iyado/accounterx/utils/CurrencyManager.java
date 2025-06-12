@@ -21,10 +21,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import io.github.iyado.accounterx.adapters.CurrencyManagerAdapter;
-import io.github.iyado.accounterx.Inputactivities.AddNewCurrencyActivity;
+import io.github.iyado.accounterx.inputactivities.AddNewCurrencyActivity;
 import io.github.iyado.accounterx.R;
 
 
+/** @noinspection EmptyMethod*/
 public class CurrencyManager extends AppCompatActivity {
 
     public FloatingActionButton floatingActionButton;

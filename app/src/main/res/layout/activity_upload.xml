@@ -1,159 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:layout_marginBottom="50sp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Inputactivities.AddUserActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.cardview.widget.CardView
-        android:layout_marginBottom="50dp"
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_marginBottom="50sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="20dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".inputactivities.AddUserActivity">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_marginBottom="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center_horizontal"
-            android:padding="20dp"
-            android:background="@drawable/lavender_border">
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp">
 
-            <TextView
+            <LinearLayout
+                android:layout_marginBottom="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/adduser"
-                android:textSize="30sp"
-                android:textAlignment="center"
-                android:textColor="@color/lavender"/>
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:padding="20dp"
+                android:background="@drawable/lavender_border">
 
-            <ImageView
-                android:layout_gravity="center"
-                android:id="@+id/uploadImage"
-                android:layout_width="100sp"
-                android:layout_height="100sp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                android:src="@android:drawable/ic_menu_camera" />
-
-            <NumberPicker
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/userid"
-                android:background="@drawable/lavender_border"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:inputType="number"
-                android:hint="@string/box_id"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/fullname"
-                android:autofillHints="username"
-                android:background="@drawable/lavender_border"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:inputType="textAutoComplete"
-                android:hint="@string/fullname"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
-
-            <EditText
-                android:autofillHints="username"
-                android:hint="@string/username"
-                android:id="@+id/username"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/lavender_border"
-                android:gravity="start|center_vertical"
-                android:inputType="text"
-                android:padding="16dp"
-                android:textColor="@color/lavender" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/useraccount"
-                android:autofillHints="creditCardNumber"
-                android:background="@drawable/lavender_border"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:typeface="monospace"
-                android:inputType="numberDecimal"
-                android:hint="@string/opening_credit"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"/>
-
-            <Spinner
-                android:id="@+id/curr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <RadioGroup
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <RadioButton
-                    android:id="@+id/chf"
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/for_it" />
+                    android:text="@string/adduser"
+                    android:textSize="30sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/lavender" />
 
-                <RadioButton
-                    android:id="@+id/cho"
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@android:drawable/ic_menu_camera" />
+
+                <NumberPicker
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/on_it" />
+                    android:layout_height="60dp"
+                    android:id="@+id/userid"
+                    android:background="@drawable/lavender_border"
+                    android:layout_marginTop="20dp"
+                    android:padding="16dp"
+                    android:inputType="number"
+                    android:hint="@string/box_id"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/lavender" />
 
-            </RadioGroup>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/fullname"
+                    android:autofillHints="username"
+                    android:background="@drawable/lavender_border"
+                    android:layout_marginTop="20dp"
+                    android:padding="16dp"
+                    android:inputType="textAutoComplete"
+                    android:hint="@string/fullname"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/lavender" />
 
-            <RadioGroup
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                <EditText
+                    android:autofillHints="username"
+                    android:hint="@string/username"
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/lavender_border"
+                    android:gravity="start|center_vertical"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:textColor="@color/lavender" />
 
-                <RadioButton
-                    android:id="@+id/chb1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/primary" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/useraccount"
+                    android:autofillHints="creditCardNumber"
+                    android:background="@drawable/lavender_border"
+                    android:layout_marginTop="20dp"
+                    android:padding="16dp"
+                    android:typeface="monospace"
+                    android:inputType="numberDecimal"
+                    android:hint="@string/opening_credit"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/lavender" />
 
-                <RadioButton
-                    android:id="@+id/chb2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/secondary" />
-            </RadioGroup>
+                <Spinner
+                    android:id="@+id/curr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="@string/save"
-                android:id="@+id/saveButton"
-                android:textSize="18sp"
-                android:layout_marginTop="20dp"
-                app:cornerRadius = "20dp"/>
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/chf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/for_it" />
 
-    </androidx.cardview.widget.CardView>
+                    <RadioButton
+                        android:id="@+id/cho"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/on_it" />
 
-</ScrollView>
+                </RadioGroup>
+
+                <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/chb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/primary" />
+
+                    <RadioButton
+                        android:id="@+id/chb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/secondary" />
+                </RadioGroup>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/save"
+                    android:id="@+id/saveButton"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    app:cornerRadius="20dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+</layout>

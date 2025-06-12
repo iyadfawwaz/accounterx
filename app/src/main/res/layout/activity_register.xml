@@ -1,94 +1,98 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
 
+    </data>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:id="@+id/appbaro"
-        android:fitsSystemWindows="true"
-        android:background="@drawable/foresto"
-        android:overScrollMode="always"
-        android:layout_height="160dp">
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:fitsSystemWindows="true"
-            android:overScrollMode="always"
-            app:layout_scrollFlags="scroll|enterAlways">
-
-            <ImageView
-                android:contentDescription="@string/app_name"
-                app:layout_collapseMode="pin"
-                android:layout_gravity="start|bottom"
-                android:background="@drawable/login_button_bk"
-                android:id="@+id/imageView4"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:srcCompat="@drawable/dolar" />
-
-            <androidx.appcompat.widget.Toolbar
-
-                android:id="@+id/toolbar"
-                app:layout_collapseMode="pin"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme" />
-
-            <TextView
-                android:textColor="@color/white"
-                android:fontFamily="monospace"
-                android:background="@drawable/foresto"
-                android:gravity="center"
-                 android:layout_gravity="center|bottom"
-                app:layout_collapseMode="pin"
-                android:id="@+id/textView7"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:text="@string/app_name" />
-
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:contentDescription="@string/app_name"
-        android:fitsSystemWindows="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_anchorGravity="bottom|end"
-        app:layout_anchor="@id/appbaro"
-       android:backgroundTint="@android:color/primary_text_dark"
-        android:layout_marginEnd="12dp" />
-
-    <androidx.core.widget.NestedScrollView
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-      android:backgroundTintMode="multiply"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <LinearLayout
 
-        android:background="@color/white"
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/appbaro"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/foresto"
+            android:overScrollMode="always"
+            android:layout_height="160dp">
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:gravity="center">
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:fitsSystemWindows="true"
+                android:overScrollMode="always"
+                app:layout_scrollFlags="scroll|enterAlways">
 
-        <include android:id="@+id/included" layout="@layout/layout_registero"/>
+                <ImageView
+                    android:contentDescription="@string/app_name"
+                    app:layout_collapseMode="pin"
+                    android:layout_gravity="start|bottom"
+                    android:background="@drawable/login_button_bk"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@drawable/dolar" />
 
-        </LinearLayout>
+                <androidx.appcompat.widget.Toolbar
 
-    </androidx.core.widget.NestedScrollView>
+                    app:layout_collapseMode="pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:fontFamily="monospace"
+                    android:background="@drawable/foresto"
+                    android:gravity="center"
+                    android:layout_gravity="center|bottom"
+                    app:layout_collapseMode="pin"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:text="@string/app_name" />
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:contentDescription="@string/app_name"
+            android:fitsSystemWindows="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchorGravity="bottom|end"
+            app:layout_anchor="@id/appbaro"
+            android:backgroundTint="@android:color/primary_text_dark"
+            android:layout_marginEnd="12dp" />
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:backgroundTintMode="multiply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:background="@color/white"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <include
+                    android:id="@+id/included"
+                    layout="@layout/layout_registero" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

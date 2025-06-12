@@ -132,20 +132,22 @@ public class Prog implements Serializable {
         this.rprofit = rprofit;
     }
 
+
     public double getCount() {
-        return count;
-    }
+      return count;
+  }
+
 
     public void setCount(double count) {
+
         this.count = count;
     }
 
     public double getSumAll() {
         return sumAll;
-    }
+   }
+   public void setSumAll(double sumAll) {
 
-    @SuppressWarnings("unused")
-    public void setSumAll(double sumAll) {
         this.sumAll = sumAll;
     }
 

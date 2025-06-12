@@ -1,71 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:fitsSystemWindows="true"
-    android:background="@drawable/backo"
-    style="@style/loginParent">
-    <ScrollView
-        style="@style/parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-        <RelativeLayout
-            style="@style/parent">
+    <data>
 
+    </data>
 
-            <LinearLayout
-                android:background="@drawable/foresto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:baselineAligned="false"
-                android:weightSum="12">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/backo"
+        style="@style/loginParent"
+        tools:ignore="Overdraw">
+
+        <ScrollView style="@style/parent">
+
+            <RelativeLayout style="@style/parent">
+
 
                 <LinearLayout
-                    style="@style/parent"
                     android:background="@drawable/foresto"
-                    android:orientation="vertical"
-                    android:layout_weight="3"
-                    android:layout_width="0dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:baselineAligned="false"
+                    android:weightSum="12">
 
-                    <ImageView
+                    <LinearLayout
                         style="@style/parent"
-                        android:background="@drawable/ic_login_bk"
-                        android:contentDescription="@string/currency" />
+                        android:background="@drawable/foresto"
+                        android:orientation="vertical"
+                        android:layout_weight="3"
+                        android:layout_width="0dp">
+
+                        <ImageView
+                            style="@style/parent"
+                            android:background="@drawable/ic_login_bk"
+                            android:contentDescription="@string/currency" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:orientation="vertical"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp">
 
 
-                <TextView
-                    style="@style/headerText"
-                    android:layout_gravity="center"
-                    android:text="@string/login"
-                    android:layout_marginTop="40dp"/>
-                <include
-                    layout="@layout/layout_logino"/>
+                    <TextView
+                        style="@style/headerText"
+                        android:layout_gravity="center"
+                        android:text="@string/login"
+                        android:layout_marginTop="40dp" />
 
-            </LinearLayout>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="10dp"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/baseline_attach_money_24" />
-        </RelativeLayout>
+                    <include layout="@layout/layout_logino" />
 
-    </ScrollView>
+                </LinearLayout>
 
-</RelativeLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/baseline_attach_money_24" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

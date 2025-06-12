@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<com.google.android.material.card.MaterialCardView
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:layout_margin="@dimen/d4"
-    android:backgroundTint="@color/loginBkColor"
-    android:theme="@style/Widget.Material3.CardView.Outlined"
-    app:cardElevation="@dimen/cardview_default_elevation">
-<LinearLayout
-    android:id="@+id/x"
-    android:layout_margin="@dimen/d4"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:layout_weight="1"
-    android:gravity="center"
-    android:weightSum="2"
-    android:orientation="vertical">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:layout_margin="@dimen/d4"
-        android:id="@+id/sumdx"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:background="@drawable/lavender_border"
-        android:gravity="center"
-        android:textColor="@color/x500" />
+    <data>
 
-    <TextView
-        android:id="@+id/areax"
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="@dimen/d4"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@string/dolar"
-        android:textColor="@color/x500" />
-</LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+        android:backgroundTint="@color/loginBkColor"
+        android:theme="@style/Widget.Material3.CardView.Outlined"
+        app:cardElevation="@dimen/cardview_default_elevation">
+
+        <LinearLayout
+            android:id="@+id/x"
+            android:layout_margin="@dimen/d4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_margin="@dimen/d4"
+                android:id="@+id/sumdx"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/lavender_border"
+                android:gravity="center"
+                android:textColor="@color/x500" />
+
+            <TextView
+                android:id="@+id/areax"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/d4"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/dolar"
+                android:textColor="@color/x500" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

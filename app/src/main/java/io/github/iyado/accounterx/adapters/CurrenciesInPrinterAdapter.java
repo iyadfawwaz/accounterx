@@ -115,9 +115,6 @@ public class CurrenciesInPrinterAdapter extends RecyclerView.Adapter<CurrenciesI
         return position;
     }
 
-    public void setWhere() {
-    }
-
     static class CursViewHolder extends RecyclerView.ViewHolder {
 
 
